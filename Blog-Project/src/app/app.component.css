@@ -1,20 +1,77 @@
+body {
+  font-family: Arial;
+  padding: 20px;
+  background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background-image: url(https://www.syfy.com/sites/syfy/files/styles/scale--1200/public/2020/10/the-mothman.jpg);
+  color: #ddd;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+  background-image: url(https://static.wikia.nocookie.net/fallout/images/3/34/FO76_Mothman_Spread.png/revision/latest?cb=20200927082132);
+}
+
+/* Add a card effect for articles */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+    width: 100%;
+    padding: 0;
+  }
+}
 .parent {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
-  grid-row-gap: 30px;
+  grid-row-gap: 0px;
   }
 
-  .div1 { grid-area: 1 / 1 / 2 / 6;
-          background-color: blue;
-          font-size: x-large;
-  }
-  .div2 { grid-area: 2 / 3 / 6 / 6;
-          background-color: blueviolet;
-          font-size: larger;
-  }
-  .div3 { grid-area: 2 / 1 / 6 / 3;
-          background-color: coral;
-          font-size: larger;
-  }
+  .header { grid-area: 1 / 1 / 2 / 6; }
+  .div2 { grid-area: 2 / 1 / 6 / 4; }
+  .div3 { grid-area: 2 / 4 / 6 / 6; }
